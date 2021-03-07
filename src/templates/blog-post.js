@@ -22,13 +22,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             className="postBody"
             style={{
               ...scale(-1 / 5),
-            }}
-          >
+            }}>
             {post.frontmatter.date}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
+        <hr />
       </article>
 
       <nav>

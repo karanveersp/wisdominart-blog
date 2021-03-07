@@ -6,14 +6,14 @@ import SEO from "../components/seo"
 const SingleTagTemplate = ({ data, pageContext, location }) => {
   const { posts, tag } = pageContext
   return (
-      <div>
-    <Layout location={location}>
-      <div>
-        <article>
-          <header>
-            <h1 className="postTitle">{tag} Posts</h1>
-          </header>
-          
+    <div>
+      <Layout location={location}>
+        <div>
+          <article>
+            <header>
+              <h1 className="postTitle">{tag} Posts</h1>
+            </header>
+
             <ul className="postBody">
               {posts.map((post, index) => {
                 return (
@@ -23,13 +23,10 @@ const SingleTagTemplate = ({ data, pageContext, location }) => {
                 )
               })}
             </ul>
-        </article>
-      </div>
-    </Layout>
-    <SEO
-        title={`${tag} posts`}
-        description={`All posts for ${tag}`}
-      />
+          </article>
+        </div>
+      </Layout>
+      <SEO title={`${tag} posts`} description={`All posts for ${tag}`} />
     </div>
   )
 }

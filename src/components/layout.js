@@ -5,22 +5,25 @@ import { rhythm, scale } from "../utils/typography"
 import "../styles/global.css"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
-const Layout = ({ location, children }) => {
+import Light from "../../static/img/sun.svg"
+import Dark from "../../static/img/moon.svg"
 
+const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
-    query AuthorUrlsQuery {
+    query {
       site {
         siteMetadata {
-          title,
-          author,
+          title
+          author
           social {
-            youtubeUrl,
+            youtubeUrl
             instagramUrl
           }
         }
       }
     }
   `)
+
   const { author, title } = data.site.siteMetadata
 
   const rootPath = `${__PATH_PREFIX__}/`
@@ -34,8 +37,7 @@ const Layout = ({ location, children }) => {
           marginBottom: rhythm(1.0),
           marginTop: 0,
           color: "var(--textTitle)",
-        }}
-      >
+        }}>
         <Link to={`/`}>{title}</Link>
       </h1>
     )
@@ -47,7 +49,6 @@ const Layout = ({ location, children }) => {
     )
   }
   return (
-
     <div
       style={{
         marginLeft: `auto`,
@@ -56,42 +57,44 @@ const Layout = ({ location, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         backgroundColor: "var(--bg)",
         color: "var(--textNormal)",
-      }}
-    >
+      }}>
       <div style={{ float: "right" }}>
         <Link className="navLink" to="/about">
-            About
-          </Link>
+          About
+        </Link>
         <Link className="navLink" to="/tags">
           Tags
         </Link>
 
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
-            <button className="themeToggler"
+            <button
+              className="themeToggler"
               // role="button"
               // styling="link"
               style={{ cursor: "pointer", fontSize: rhythm(1.0) }}
               onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
               onKeyDown={() => toggleTheme(theme === "dark" ? "light" : "dark")}
-              tabIndex={0}
-            >
-              &#9728;
+              tabIndex={0}>
+              {theme === "dark" ? <Dark /> : <Light />}
             </button>
           )}
         </ThemeToggler>
-
       </div>
       <header style={{ margin: "auto" }}>{header}</header>
       <main>{children}</main>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <hr></hr>
       <div className="center">
-        <footer><small>© {author} {new Date().getFullYear()}. 
-        Powered by&nbsp;
-        <a href="http://gatsbyjs.org" target="_blank"
-          rel="noreferrer">Gatsby.js</a></small></footer>
+        <footer>
+          <small>
+            © {author} {new Date().getFullYear()}. Powered by&nbsp;
+            <a href="http://gatsbyjs.org" target="_blank" rel="noreferrer">
+              Gatsby.js
+            </a>
+          </small>
+        </footer>
       </div>
     </div>
   )

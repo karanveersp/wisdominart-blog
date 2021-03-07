@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Wisdom in Art`,
     author: 'Karanveer',
-    description: `A blog about learning and improving as an artist`,
+    description: `Sketch Blog`,
     siteUrl: "https://wisdominart.com",
     social: {
       youtubeUrl: 'https://www.youtube.com/channel/UCOKRIU3pGwF1WAPHbv-05uA',
@@ -10,7 +10,7 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/img`,
-        name: `assets`,
+        path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
     {
@@ -45,7 +45,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 900,
+              linkImagesToOriginal: true
             },
           },
           {
@@ -92,6 +93,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /img/,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -15,3 +15,5 @@ code .
 Commit changes, and push.
 
 The changes should get picked up by `netlify` watching the git repo and published.
+
+Use `npx netlify-cms-proxy-server` to start a local cms server, then run `gatsby develop` and make changes.

@@ -5,11 +5,9 @@ import "../styles/global.css"
 Irving.headerFontFamily = ["Ubuntu"]
 Irving.googleFonts = [
   {
-    name: 'Ubuntu',
-    styles: [
-      '500'
-    ]
-  }
+    name: "Ubuntu",
+    styles: ["500"],
+  },
 ]
 // Styles that have to do with light/dark theme variables
 Irving.overrideStyles = () => ({
@@ -25,7 +23,7 @@ Irving.overrideStyles = () => ({
   blockquote: {
     borderColor: "var(--textNormal)",
     borderLeft: "3px solid var(--textNormal)",
-    paddingLeft: "15px"
+    paddingLeft: "15px",
   },
 })
 

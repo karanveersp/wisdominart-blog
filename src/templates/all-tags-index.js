@@ -28,10 +28,7 @@ const AllTagsTemplate = ({ data, pageContext, location }) => {
           </article>
         </div>
       </Layout>
-      <SEO
-        title={"Tags"}
-        description={"All blog tags"}
-      />
+      <SEO title={"Tags"} description={"All blog tags"} />
     </div>
   )
 }

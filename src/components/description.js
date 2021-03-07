@@ -22,9 +22,7 @@ const Description = () => {
   const { description } = data.site.siteMetadata
   return (
     <div className="description">
-      <p>
-        {description}
-      </p>
+      <p>{description}</p>
     </div>
   )
 }

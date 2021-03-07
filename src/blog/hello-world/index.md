@@ -1,9 +1,11 @@
 ---
 title: Hello World
-draft: false
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
-tags: ["that"]
+draft: true 
+description: Hello world
+tags:
+  - that
+featuredImage: "./salty_egg.jpg"
+date: 2021-03-01T21:42:05.733Z
 ---
 
 This is my first post on my new fake blog! How exciting!

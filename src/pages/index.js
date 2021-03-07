@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Description from "../components/description"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
@@ -12,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="All posts" />
       <Description />
-      <br/>
+      <br />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -20,29 +21,37 @@ const BlogIndex = ({ data, location }) => {
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+                  marginBottom: rhythm(1/2),
+                }}>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-             
-              <ul style={{margin: 0}}>
-                <li style={{ display: "inline", marginRight: "1rem"}}>
-                <small>{node.frontmatter.date}</small>
+              
+              <Img className="featuredImage" fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+
+              <ul style={{ margin: 0 }}>
+                <li
+                  style={{
+                    display: "inline",
+                    marginRight: "1rem",
+                  }}>
+                  <small>{node.frontmatter.date}</small>
                 </li>
-              {node.frontmatter.tags?.map(tag => {
-                return (
-                  <li key={tag} style={{ display: "inline", marginRight: "1rem"}}>
-                  <small>
-                  <Link to={"/tags/" + tag}>
-                    {tag}
-                  </Link>
-                  </small>
-                  </li>
-                )
-              })}
+                {node.frontmatter.tags?.map(tag => {
+                  return (
+                    <li
+                      key={tag}
+                      style={{
+                        display: "inline",
+                        marginRight: "1rem",
+                      }}>
+                      <small>
+                        <Link to={"/tags/" + tag}>{tag}</Link>
+                      </small>
+                    </li>
+                  )
+                })}
               </ul>
             </header>
             <section>
@@ -52,6 +61,7 @@ const BlogIndex = ({ data, location }) => {
                 }}
               />
             </section>
+            <br/>
           </article>
         )
       })}
@@ -83,9 +93,17 @@ export const pageQuery = graphql`
             title
             description
             tags
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+              }
+            }
           }
         }
       }
     }
   }
+}
 `

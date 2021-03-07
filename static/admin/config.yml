@@ -1,20 +1,35 @@
-backend:
-  name: git-gateway
-  branch: main
+local_backend: true
 
-media_folder: static/img
-public_folder: /img
+backend: 
+  name: git-gateway
+  
+media_folder: src/images
+public_folder: /images
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "src/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - label: "Title"
         name: "title"
         widget: "string"
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: false
+      - label: "Description"
+        name: "description"
+        widget: "string"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["none"]
+      - label: "Featured Image"
+        name: "featuredImage"
+        widget: "image"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
