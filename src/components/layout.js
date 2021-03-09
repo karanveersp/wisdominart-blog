@@ -4,9 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import "../styles/global.css"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-
-import Light from "../../static/img/sun.svg"
-import Dark from "../../static/img/moon.svg"
+import ThemeIcon from "../../static/img/themeIcon.svg"
 
 const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
@@ -76,7 +74,7 @@ const Layout = ({ location, children }) => {
               onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
               onKeyDown={() => toggleTheme(theme === "dark" ? "light" : "dark")}
               tabIndex={0}>
-              {theme === "dark" ? <Dark /> : <Light />}
+              <ThemeIcon />
             </button>
           )}
         </ThemeToggler>
