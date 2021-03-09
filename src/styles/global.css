@@ -12,6 +12,9 @@ body {
   border-radius: 5px;
 }
 
+svg[style] {
+  display: inline in !important;
+}
 svg {
   fill: var(--sunColor);
   height: 20px;
