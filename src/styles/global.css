@@ -5,7 +5,31 @@ body {
   --textLink: rgb(94, 63, 58);
   --sunColor: rgb(94, 63, 58);
   --hr: hsla(0, 0%, 0%, 0.2);
+  --linkHover: rgb(153, 40, 40);
   background-color: var(--bg);
+}
+
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --specialTextBg: rgb(51, 51, 51);
+  --specialTextColor:  #bcbdcf;
+  --bg: #161923;
+  --textNormal: #bcbdcf;
+  --textTitle: #bcbdcf;
+  --textLink: #bcbdcf;
+  --linkHover: #2fb8df;
+  --sunColor: #bcbdcf;
+  --hr: hsla(0, 0%, 100%, 0.2);;
+}
+
+.card {
+  background-color: var(--cardColor);
+  border-radius: 12px; /* 5px rounded corners */
+  padding: 20px;
+  width: 50%;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .featuredImage {
@@ -16,20 +40,23 @@ svg {
   fill: var(--sunColor);
 }
 
+
 p {
   margin-bottom: 1em;
 }
 
-body.dark {
-  -webkit-font-smoothing: antialiased;
-  --specialTextBg: rgb(51, 51, 51);
-  --specialTextColor:  #bcbdcf;
-  --bg: #161923;
-  --textNormal: #bcbdcf;
-  --textTitle: #bcbdcf;
-  --textLink: #bcbdcf;
-  --sunColor: #bcbdcf;
-  --hr: hsla(0, 0%, 100%, 0.2);;
+a:hover {
+  color: var(--linkHover);
+}
+
+h3 a{
+  text-decoration: none;
+}
+h1 a{
+  text-decoration: none;
+}
+h2 a {
+  text-decoration: none;
 }
 
 .center {

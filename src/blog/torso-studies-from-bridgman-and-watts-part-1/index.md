@@ -1,7 +1,7 @@
 ---
 title: Torso Studies from Bridgman and Watts Part 1
 date: 2021-03-06
-featuredImage: "./torso-from-photo.jpg"
+featuredImage: "torso-from-photo.jpg"
 draft: false
 description: "Begin learning anatomy with Jeffrey Watts' new book"
 tags: ["anatomy", "torso", "studies"]
@@ -57,7 +57,7 @@ His instructions are to draw from Bridgman as the primary source and to use his 
 
 I adopted his recommendation and this was my first sheet of drawings.
 
-![Torso Studies Bridgman](./torso-from-bridgman.jpg)
+![Torso Studies Bridgman](torso-from-bridgman.jpg)
 
 I used mostly Bridgman but included some of Watt's ingenious and descriptive half tone shapes in the armpit junction.
 
@@ -67,13 +67,13 @@ In other words, _I'm putting down lines in 2d, but I'm thinking in 3d._ Which is
 
 The small diagrammatic construction in the lower left shows how I decided to _contain_ or _scaffold_ the torso for the details in the other drawings.
 
-![Torso Study With References](./torso-study-refs.jpg)
+![Torso Study With References](torso-study-refs.jpg)
 
 On this sheet, the drawing on the right was done from imagination, and the drawing on the left was done from the photo reference in Watts' book.
 
 Here's a detail of the photo ref drawing.
 
-![Torso Drawing From Photo](./torso-from-photo.jpg)
+![Torso Drawing From Photo](torso-from-photo.jpg)
 
 I used the photograph for the overall proportions, and Watts' drawing from the photo to guide the shadow shapes and half tones. 
 

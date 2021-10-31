@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Wisdom in Art`,
     author: 'Karanveer',
-    description: `Sketch Blog`,
+    description: `A Sketch Blog.`,
     siteUrl: "https://wisdominart.com",
     social: {
       youtubeUrl: 'https://www.youtube.com/channel/UCOKRIU3pGwF1WAPHbv-05uA',

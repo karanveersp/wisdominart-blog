@@ -29,6 +29,7 @@ const BlogIndex = ({ data, location }) => {
               </h3>
               
               <Img className="featuredImage" fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+              <br/>
 
               <ul style={{ margin: 0 }}>
                 <li
@@ -95,7 +96,7 @@ export const pageQuery = graphql`
             tags
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 600, quality: 100) {
+                fluid(maxWidth: 900, quality: 100) {
                   ...GatsbyImageSharpFluid
                   ...GatsbyImageSharpFluidLimitPresentationSize
               }
