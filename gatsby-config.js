@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: "https://wisdominart.com",
     social: {
       youtubeUrl: 'https://www.youtube.com/channel/UCOKRIU3pGwF1WAPHbv-05uA',
-      instagramUrl: 'http://instagram.com/karanveer41'
+      instagramUrl: 'http://instagram.com/karanveer_art'
     },
   },
   plugins: [
