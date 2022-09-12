@@ -79,22 +79,23 @@ But if they're done too carelessly, then they're not helpful for future
 reference.
 
 So I allowed myself to use an eraser, and make things look clear, using simple
-hatching for the rendering. The also rendering presented an opportunity to
+hatching for the rendering. The rendering also presented an opportunity to
 suggest the direction of the muscle fibers.
 
 # Conclusion
 
-Starting a new sketchbook is always fun, but also daunting at times. You don't
+Starting a new sketchbook is always fun, but also daunting at times. I didn't
 want to ruin the brand new pages with bad drawings! A good way to get around
-that fear is to just invest in cheaper sketchbooks, but don't compromise too
-much on the paper quality. Part of what makes drawing fun is the feedback you
-get from your using good tools.
+that fear is to just invest in cheaper sketchbooks, but without compromising too
+much on the paper quality. Part of what makes drawing fun is the feel of your
+tools on good paper.
 
-Here is an opportunity to practice where the subject is already available.
+Anatomy studies are an opportunity to practice where the subject is already
+available and decided.
 
-I get to work on the gesture, proportions, and structure at my own pace. It
-takes some patience to get good results.
+The focus should be on the gesture, proportions, and structure, working at your
+own pace. It takes some patience to get good results.
 
-Studying anatomy is difficult for beginners but stick with it. Pretty soon,
+Studying anatomy might seem boring for beginners but stick with it. Pretty soon,
 you'll start to draw the accurate shapes instinctively, and your gestures will
 start to have some weight because of the forms you're able to suggest.
